@@ -1,3 +1,11 @@
+This favicon was generated using the following font:
+
+- Font Title: Anybody
+- Font Author: Copyright 2020 The Anybody Project Authors (https://github.com/Etcetera-Type-Co/Anybody)
+- Font Source: http://fonts.gstatic.com/s/anybody/v2/VuJbdNvK2Ib2ppdWYq311GH32hxIv0sd5grncSUi2F_Wim4J12DPrsXD_nBPpQ.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))
+
+
 <a href="https://www.flaticon.com/free-icons/challenge" title="challenge icons">Challenge icons created by Freepik - Flaticon</a>
 
 <a href="https://www.flaticon.com/br/icones-gratis/tempo" title="tempo ícones">Tempo ícones criados por Freepik - Flaticon</a>
