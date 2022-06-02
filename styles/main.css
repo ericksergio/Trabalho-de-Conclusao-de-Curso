@@ -252,6 +252,7 @@
     gap: 3rem;
 }
 
+
 .desafios{
     min-height: 100vh;
     width: 100%;
@@ -269,4 +270,60 @@
     font-family: var(--font-primary);
     font-size: 6rem;
     margin: 3rem;
+}
+
+.countdown-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+}
+
+.countdown-container h2{
+    font-family: var(--font-secundary);
+    font-size: 3rem;
+}
+
+.wrapper-countdown{
+    display: flex;
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: 5rem;
+}
+
+
+.big-text{
+    font-size: 8rem;
+    font-family: var(--font-primary);
+    margin: 0 2rem;
+}
+
+.hours-c,
+.minutes-c,
+.seconds-c{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: var(--font-secundary);
+    font-size: 1.5rem;
+}
+
+.wrapper-button{
+    display: flex;
+    margin-top: 3rem;
+    gap: 3rem;
+}
+
+.wrapper-button button{
+    font-family: var(--font-action);
+    border-radius: .9rem;
+    padding: .4rem .2rem;
+    background-color: #252599;
+    color: #fff;
+    cursor: pointer;
+    width: 10rem;
+
 }
