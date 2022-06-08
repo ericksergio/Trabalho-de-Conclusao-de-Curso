@@ -271,6 +271,11 @@
     font-size: 4rem;
 }
 
+.detail-box textarea{
+    font-size: .8rem;  
+    padding: .8rem;  
+}
+
 .countdown-container{
     display: flex;
     justify-content: center;
