@@ -1,44 +1,34 @@
-"use strict"
 
-var hh = 0;
-var mm = 0;
-var ss = 0;
+function startTimer(duration, displayM, displayS) {
+    minutes = document.querySelector('#minutes');
+    seconds = document.querySelector('#seconds');
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
 
-var timer = 1000; //Quantos milesimos valem 1 segundo
-var crono;
-
-function startFunction(){
-    crono = setInterval(() => {timerFunction()}, timer);    
-}
-
-function pauseFunction(){
-    clearInterval(crono);
-}
-
-function stopFunction(){
-    hh = 0;
-    mm = 0;
-    ss = 0;
-}
-
-function timerFunction(){
-    ss++;
-
-    if(ss == 60){
-        mm++;
-
-        if(mm == 60){
-            mm = 0;
-            hh++;
+        minutes = minutes < 10 ? "0" + minutes : minutes; //Se minutes < 10 acrescenta no display o 0
+        seconds = seconds < 10 ? "0" + seconds : seconds; //Se seconds < 10 acrescenta no display o 0
+        displayM.textContent = minutes;
+        displayS.textContent = seconds;
+        if (--timer < 0) {
+            timer = duration;
         }
-    }
-
-
-    var format = (hhours < 10 ? '0' + hhours : hhours) + ':' +  (mminutes < 10 ? '0' + mminutes : mminutes) + ':' +  (sseconds < 10 ? '0' + sseconds : sseconds)
-
-    let hhours = document.getElementById('hours').innerText = hh;
-    let mminutes = document.getElementById('minutes').innerText = mm;
-    let sseconds = document.getElementById('seconds').innerText = ss;
-
-    
+    }, 1000);
 }
+window.onclick = function () {
+    var duration = 60 * 5; // Converter para segundos
+        displayM = document.querySelector('#minutes'); // selecionando o timer
+        displayS = document.querySelector('#seconds'); // selecionando o timer
+    startTimer(duration, displayM, displayS); // iniciando o timer
+};
+
+function restartTimer(duration, displayM, displayS) {
+    document.location.reload(false);
+}
+
+
+function pauseTimer() {
+    clearInterval(timer);
+} 
+

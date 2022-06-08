@@ -14,20 +14,21 @@
   </head>
   <body>
     <div class="main-container">
-      <header class="header-container">
-        <div class="img-wrapper-header">
-          <a href="/images/favicon-32x32.png">SmartClass</a>
-        </div>
+        <header class="header-container ">
+          <div class="img-wrapper-header">
+            <a href="#header">SmartClass</a>
+          </div>
 
-        <nav class="menu-header">
-            <a href="">Saiba mais</a>
-            <a href="">Recursos</a>
-            <a href="">Entrar</a>
-            <button class="btn-header">Cadastre-se</button>
-        </nav>
-      </header>
-        <aside class="title-container">
-          <div class="title-container-text">
+          <nav class="menu-header">
+              <a href="">Saiba mais</a>
+              <a href="#recursos">Recursos</a>
+              <a href="">Entrar</a>
+              <button class="btn-header">Cadastre-se</button>
+          </nav>
+        </header>
+
+        <aside class="title-container "id="header">
+          <div class="title-container-text" >
             <h1>SmartClass</h1>
             <h2>Um jeito fácil e prático, de organizar de modo gamificado seus eventos.</h2>
           </div>
@@ -35,36 +36,36 @@
             <img src="/images/img-main.png" alt="Imagem de um computador">
           </div>
         </aside>
-          <div class="subtitle-container-menu">
+
+        <div class="subtitle-container-menu" id="recursos">
             <h5>Conheça nossas funcionalidades:</h5>
             <div class="container-wrapper-menu-itens">
-              <a id="item-desafios" href="#">
+              <a id="item-desafios" href="#desafios">
                 Desafios<img src="/images/target.png" alt=""></a>
               <a id="item-cronometro" href="#">Cronometro <img src="/images/cronometro.png" alt=""></a>
-              <a id="item-temp" href="#">Temporizador <img src="/images/temporizador.png" alt=""></a>
+              <a id="item-temp" href="#countdown">Temporizador <img src="/images/temporizador.png" alt=""></a>
               <a id="item-sortear" href="#">Sortear <img src="/images/shuffle.png" alt=""></a>
               <a id="item-cria-gp" href="#">+ Grupo <img src="/images/team.png" alt=""></a>
               <a id="item-pontua-player" href="#">Pontuar players <img src="/images/medal.png" alt=""></a>
               <a id="item-pontua-gp" href="#">Pontuar grupo <img src="/images/award.png" alt=""></a>
-              <a id="item-leaderboard" href="#">Leaderboard <img src="/images/podium.png" alt=""></a>
+              <a id="item-leaderboard" href="#">Placar Geral<img src="/images/podium.png" alt=""></a>
             </div>
         </div>
 
         <section class="desafios" id="desafios">
-          <div class="desafios-container">
+          <div class="desafios-container" >
             <h5>Desafios</h5>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus nam dignissimos nulla tempore, delectus similique, excepturi asperiores aperiam libero labore sapiente, fugit cumque laboriosam vel. Molestias similique aut non nobis?</p>
+            <div class="detail-box">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus nam dignissimos nulla tempore, delectus similique, excepturi asperiores aperiam libero labore sapiente, fugit cumque laboriosam vel. Molestias similique aut non nobis?</p>
+            </div>
             <img src="" alt="Imagem desafios">
           </div>
         </section>
 
-        <div class="countdown-container">
+        <section class="countdown-container" id="countdown">
           <h2>Temporizador</h2>
           <div class="wrapper-countdown">
-            <div class="hours-c">
-              <p class="big-text" id="hours">00</p>
-              <span>Horas</span>
-            </div>
+           
             <div class="minutes-c">
               <p class="big-text" id="minutes">00</p>
               <span>Minutos</span>
@@ -74,14 +75,14 @@
               <span>Segundos</span>
             </div>
           </div>
-          <div class="wrapper-button">
-            <button onclick="startFunction()"; id="iniciar">Iniciar</button>
-            <button onclick="pauseFunction()"; id="pausar">Pausar</button>
-            <button onclick="stopFunction()"; id="parar">Parar</button>
+          <div class="wrapper-button-countdown">
+            <button class="button-action"onclick="temporizador()" id="button-start">Start</button>
+            <button class="button-action"onclick="pauseTimer()">Pause</button>
+            <button class="button-action"onclick="restartTimer()">Restart</button>
           </div>
-        </div>
+        </section>
     </div>
 
-    <script src="script/main.js"></script>
+    <script src="scripts/main.js"></script>
   </body>
 </html>

@@ -254,22 +254,21 @@
 
 
 .desafios{
-    min-height: 100vh;
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--background-primary-color);
+    min-height: 100vh;
 }
-
-.desafios-container{
-    margin-top: 3rem;
-}
+ 
 
 .desafios-container h5{
     display: flex;
-    justify-content:center;
-    text-align: center;
-    font-family: var(--font-primary);
-    font-size: 6rem;
-    margin: 3rem;
+    align-items: start;
+    justify-content: center;
+    margin-top: 2.5rem;
+    font-family: var(--font-secundary);
+    font-size: 4rem;
 }
 
 .countdown-container{
@@ -283,7 +282,7 @@
 
 .countdown-container h2{
     font-family: var(--font-secundary);
-    font-size: 3rem;
+    font-size: 4rem;
 }
 
 .wrapper-countdown{
@@ -300,7 +299,8 @@
     margin: 0 2rem;
 }
 
-.hours-c,
+
+
 .minutes-c,
 .seconds-c{
     display: flex;
@@ -311,19 +311,35 @@
     font-size: 1.5rem;
 }
 
-.wrapper-button{
+.wrapper-button-countdown{
+    max-width: 5rem;
+    max-height: 5rem;
+    
     display: flex;
-    margin-top: 3rem;
-    gap: 3rem;
+    justify-content: space-evenly;
+    gap: 5rem;
+    margin-top: 2rem;
 }
 
-.wrapper-button button{
-    font-family: var(--font-action);
-    border-radius: .9rem;
-    padding: .4rem .2rem;
-    background-color: #252599;
-    color: #fff;
-    cursor: pointer;
-    width: 10rem;
+.button-action{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+    max-height: 2.5rem;
+    max-width: 5.5rem;
+    font-size: 1.5rem;
+    padding: 1.5rem 1.5rem;
+
+    background-size: 4.5rem;
+    background-color: #252599;
+    color: white;
+
+    border-radius: 25%;
+    cursor: pointer;
+    transition: background-color .3s;
+}
+
+.button-action button:hover{
+    background-color: #252577;
 }
