@@ -28,7 +28,3 @@ function restartTimer(duration, displayM, displayS) {
 }
 
 
-function pauseTimer() {
-    clearInterval(timer);
-} 
-
