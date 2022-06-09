@@ -42,9 +42,9 @@
             <div class="container-wrapper-menu-itens">
               <a id="item-desafios" href="#desafios">
                 Desafios<img src="https://cdn-icons-png.flaticon.com/512/4463/4463408.png" alt=""></a>
-              <a id="item-cronometro" href="#">Cronometro <img src="https://cdn-icons.flaticon.com/png/512/526/premium/526602.png?token=exp=1654729062~hmac=7be1cb8a5d726ecb80c3df677a5b8821" alt=""></a>
+              <a id="item-cronometro" href="#cronometro">Cronometro <img src="https://cdn-icons.flaticon.com/png/512/526/premium/526602.png?token=exp=1654729062~hmac=7be1cb8a5d726ecb80c3df677a5b8821" alt=""></a>
               <a id="item-temp" href="#countdown">Temporizador <img src="https://cdn-icons-png.flaticon.com/512/1255/1255391.png" alt=""></a>
-              <a id="item-sortear" href="#">Sortear <img src="https://cdn-icons-png.flaticon.com/512/309/309458.png" alt=""></a>
+              <a id="item-sortear" href="#shuffle">Sortear <img src="https://cdn-icons-png.flaticon.com/512/309/309458.png" alt=""></a>
               <a id="item-cria-gp" href="#">+ Grupo <img src="/images/team.png" alt=""></a>
               <a id="item-pontua-player" href="#">Pontuar players <img src="/images/medal.png" alt=""></a>
               <a id="item-pontua-gp" href="#">Pontuar grupo <img src="/images/award.png" alt=""></a>
@@ -63,10 +63,28 @@
           </div>
         </section>
 
+        <section class="cronometro" id="cronometro">
+          <div class="cronometro-container">
+            <h2>Cronômetro</h2>
+            <div class="wrapper-cronometro">
+              <div class="minutes-c">
+                <p class="big-text-cron" id="minutes-cron">00</p>
+                <span>Minutos</span>
+              </div>
+              <div class="seconds-c">
+                <p class="big-text-cron" id="seconds-cron">00</p>
+                <span>Segundos</span>
+              </div>
+            </div>
+            <div class="wrapper-button-cron">
+              <button class="button-action">Start</button>
+              <button class="button-action">Restart</button>
+            </div>
+        </section>
+
         <section class="countdown-container" id="countdown">
           <h2>Temporizador</h2>
           <div class="wrapper-countdown">
-           
             <div class="minutes-c">
               <p class="big-text" id="minutes">00</p>
               <span>Minutos</span>
@@ -82,6 +100,20 @@
           </div>
         </section>
 
+        <section class="shuffle" id="shuffle">
+          <h2>Sortear</h2>
+          <div class="shuffle-container">
+            <div class="wrapper-players-on">
+              <form action="">
+                <p>Sorteando: </p>
+                  <input required="required" min="1" max="10"  type="number">
+                <p>participante(s)</p>
+                <button type="submit">Start</button>
+              </form>
+              <br>
+            </div>
+          </div>
+        </section>
     </div>
 
     <script src="scripts/main.js"></script>
