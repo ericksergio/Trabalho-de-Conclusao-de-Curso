@@ -27,4 +27,6 @@ function restartTimer(duration, displayM, displayS) {
     document.location.reload(false);
 }
 
-
+const buttonEl = document.querySelector('button-start');
+buttonEl.addEventListener('onlick', startTimer);
+     
