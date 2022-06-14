@@ -77,7 +77,7 @@
               </div>
             </div>
             <div class="wrapper-button-cron">
-              <button class="button-action" onclick="startTimer()">Start</button>
+              <button class="button-action" onclick="startTimerCron()">Start</button>
               <button class="button-action" onclick="pauseTimer()">Pause</button>
               <button class="button-action" onclick="stopTimer()">Stop</button>
             </div>
@@ -85,20 +85,20 @@
 
         <section class="countdown-container" id="countdown">
           <h2>Temporizador</h2>
+          <div class="wrapper-input">
+            <input type="number" id="temp-value" placeholder="Defina em minutos o valor do temporizador" required >
+          </div>
           <div class="wrapper-countdown">
-            <div class="minutes-c">
-              <p class="big-text" id="minutes">00</p>
-              <span>Minutos</span>
-            </div>
-            <div class="seconds-c">
-              <p class="big-text" id="seconds">00</p>
-              <span>Segundos</span>
+            <div id="timer">
+
             </div>
           </div>
           <div class="wrapper-button-countdown">
-            <button class="button-action"onclick="temporizador()" id="button-start">Start</button>
-            <button class="button-action"onclick="restartTimer()">Restart</button>
+            <button class="button-action"onclick="startTimer()" id="button-start">Start</button>
+            <!-- <button class="button-action"onclick="pauseTimerTemp()">Pause</button> -->
+            <button class="button-action"onclick="restartTimer()">Reset</button>
           </div>
+          
         </section>
 
         <section class="shuffle" id="shuffle">
@@ -106,12 +106,18 @@
           <div class="shuffle-container">
             <div class="wrapper-players-on">
               <form action="">
-                <p>Sorteando: </p>
-                  <input required="required" min="1" max="10"  type="number">
-                <p>participante(s)</p>
-                <button type="submit">Start</button>
+                <p>Entre com a quantidade de players</p>
+                <input type="number" id="shuffle-input" placeholder="players">
+                <button  class="button-action" onclick="sorteio()">Start</button>
+
+                <h3 id="shuffle-response">
+                  <p>
+                    O sorteado foi 
+                  </p>
+                  Sorteado
+                </h3>
               </form>
-              <br>
+              
             </div>
           </div>
         </section>

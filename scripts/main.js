@@ -1,40 +1,33 @@
+function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+        display.textContent = minutes + ":" + seconds;
+        if (--timer < 0) {
+            timer = duration;
+            setTimeout(timer);
+        }
+    }, 1000);
+}
 
-// function startTimer(duration, displayM, displayS) {
-//     minutes = document.querySelector('#minutes');
-//     seconds = document.querySelector('#seconds');
-//     var timer = duration, minutes, seconds;
-//     setInterval(function () {
-//         minutes = parseInt(timer / 60, 10);
-//         seconds = parseInt(timer % 60, 10);
+var getTime  = document.getElementById('temp-value');
 
-//         minutes = minutes < 10 ? "0" + minutes : minutes; //Se minutes < 10 acrescenta no display o 0
-//         seconds = seconds < 10 ? "0" + seconds : seconds; //Se seconds < 10 acrescenta no display o 0
-//         displayM.textContent = minutes;
-//         displayS.textContent = seconds;
-//         if (--timer < 0) {
-//             timer = duration;
-//         }
-//     }, 1000);
-// }
-// window.onclick = function () {
-//     var duration = 60 * 5; // Converter para segundos
-//         displayM = document.querySelector('#minutes'); // selecionando o timer
-//         displayS = document.querySelector('#seconds'); // selecionando o timer
-//     startTimer(duration, displayM, displayS); // iniciando o timer
-// };
+window.onclick = function () {
+    var duration = 60 * getTime.value // Converter para segundos
+        display = document.querySelector('#timer'); // selecionando o timer
+    startTimer(duration, display); // iniciando o timer
+};
 
-// function restartTimer(duration, displayM, displayS) {
-//     document.location.reload(false);
-// }
 
-// const buttonEl = document.querySelector('button-start');
-// buttonEl.addEventListener('onlick', startTimer);
-     
-var seconds = 0;
-var minutes = 0;
+function restartTimer(duration, display) {
+    document.location.reload(false);
+}
 
-var interval;
 
+//Cronometro Functions
 function formatTwoDigits(digit){
     if(digit<10){
         return '0' + digit
@@ -43,9 +36,9 @@ function formatTwoDigits(digit){
     }
 }
 
-function startTimer(){
-    timer()
-    interval = setInterval(timer, 1000);
+function startTimerCron(){
+    timerCron()
+    interval = setInterval(timerCron, 1000);
 }
 
 function pauseTimer(){
@@ -61,7 +54,7 @@ function stopTimer(){
 
 }
 
-function timer(){
+function timerCron(){
     seconds++
     if(seconds==60){
         minutes++
@@ -72,4 +65,12 @@ function timer(){
     }
     document.getElementById('seconds-cron').innerText = formatTwoDigits(seconds);
     document.getElementById('minutes-cron').innerText = formatTwoDigits(minutes);
+}
+
+function sorteio() {
+    const totalSort = document.getElementById('shuffle-input');
+   
+    const sort = Math.floor((Math.random() * totalSort.value) + 1);
+
+    document.getElementById('shuffle-response').innerHTML = sort;
 }

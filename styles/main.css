@@ -318,9 +318,11 @@
     justify-content: space-around;
 }
 
+
 .detail-box textarea{
     font-size: .8rem;  
-    padding: .8rem;  
+    padding: .8rem; 
+    resize: none;
 }
 
 .countdown-container{
@@ -424,6 +426,44 @@
     padding: 3rem;
     align-items: center;
     justify-content: center;
-    font-size: 3rem;
+    font-size: 1.5rem;
     margin: auto;
+    margin-top: 2rem;
+}
+
+.wrapper-players-on button{
+    font-size: 1.5rem;
+    margin: auto;
+    display: flex;
+    margin-top: 2rem;
+}
+
+.wrapper-players-on p{
+    font-size: 1.5rem;
+    margin: auto;
+    display: flex;
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+.button-is-success{
+    background-color: blue;
+    height: 1.5rem;
+    width: 3.5rem;
+    color: #fff;
+
+    font-family: var(--font-action);
+    border-radius: .9rem;
+    padding: .4rem .2rem;
+    background-color: #252599;
+    color: #fff;
+    cursor: pointer;
+    font-family: var(--font-secundary);
+
+}
+
+button .button-action{
+    margin: auto;
+    display: flex;
+    justify-content: center;
 }
